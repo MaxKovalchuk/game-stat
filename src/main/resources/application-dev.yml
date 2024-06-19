@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: game-stat
+
+  data:
+    mongodb:
+      host: ${MONGO_HOST}
+      port: 27017
+      database: admin
+      username: andersen
+      password: andersen
+      auto-index-creation: true
+
+kafka:
+  bootstrap-server: ${KAFKA_HOST}
+  consumer:
+    group-id: 'game-stat'
+    end-game-topic: 'end-game'
